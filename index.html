@@ -5,6 +5,7 @@
   <title>区块链未来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
@@ -12,15 +13,43 @@
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
     }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #00e6e6;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00e6e6;
+    }
     header {
-      padding: 30px;
+      padding: 80px 30px 40px;
       text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: transparent;
     }
     header h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 48px;
       color: #00e6e6;
     }
     .intro {
@@ -52,6 +81,10 @@
       width: 280px;
       text-align: left;
       box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
     }
     .feature-card h3 {
       color: #00ffcc;
@@ -73,11 +106,20 @@
 </head>
 <body>
 
+  <nav>
+    <div class="logo"><i class="fas fa-cubes"></i> 区块链未来</div>
+    <ul>
+      <li><a href="#intro">介绍</a></li>
+      <li><a href="#features">功能</a></li>
+      <li><a href="#footer">联系我们</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>区块链：链接未来的信任网络</h1>
+    <h1>链接未来的信任网络</h1>
   </header>
 
-  <section class="intro">
+  <section class="intro" id="intro">
     <h2>什么是区块链？</h2>
     <p>
       区块链是一种分布式数据库技术，它具有去中心化、不可篡改、全透明等特点，
@@ -85,30 +127,30 @@
     </p>
   </section>
 
-  <section class="features">
+  <section class="features" id="features">
     <div class="feature-card">
-      <h3>去中心化</h3>
+      <h3><i class="fas fa-network-wired"></i> 去中心化</h3>
       <p>不依赖任何中介机构，实现点对点的数据存储与交换，打破传统控制结构。</p>
     </div>
     <div class="feature-card">
-      <h3>数据不可篡改</h3>
+      <h3><i class="fas fa-lock"></i> 数据不可篡改</h3>
       <p>每一笔数据记录都会被加密并写入区块，一旦写入后无法被修改或删除。</p>
     </div>
     <div class="feature-card">
-      <h3>全程透明</h3>
+      <h3><i class="fas fa-eye"></i> 全程透明</h3>
       <p>任何人都可以公开查看链上的交易记录，实现真正的流程可追溯与公开。</p>
     </div>
     <div class="feature-card">
-      <h3>智能合约</h3>
+      <h3><i class="fas fa-file-code"></i> 智能合约</h3>
       <p>支持自动执行的代码逻辑，一旦触发条件满足，合约立即执行，无需人工干预。</p>
     </div>
     <div class="feature-card">
-      <h3>数字资产</h3>
+      <h3><i class="fas fa-coins"></i> 数字资产</h3>
       <p>支持加密货币、NFT 等新兴数字资产形态的发行与交易，改变价值交换方式。</p>
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     版权所有 © 2025 区块链未来 | 技术支持：OpenAI Demo
   </footer>
 
