@@ -2,31 +2,32 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>区块链未来</title>
+  <title>区块链未来 Blockchain Future</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: 'Titillium Web', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
+      line-height: 1.6;
     }
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 50, 0.7);
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
     }
     nav .logo {
       font-size: 24px;
       font-weight: 600;
-      color: #00e6e6;
+      color: #00d8ff;
     }
     nav ul {
       list-style: none;
@@ -40,118 +41,181 @@
       transition: color 0.3s;
     }
     nav ul li a:hover {
-      color: #00e6e6;
+      color: #00d8ff;
     }
-    header {
-      padding: 80px 30px 40px;
+    .hero {
+      padding: 100px 20px;
       text-align: center;
-      background: transparent;
+      background: url('https://images.unsplash.com/photo-1626331803715-c40cf9e52e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+      color: #fff;
     }
-    header h1 {
-      margin: 0;
+    .hero h1 {
       font-size: 48px;
-      color: #00e6e6;
-    }
-    .intro {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-    .intro h2 {
-      font-size: 32px;
       margin-bottom: 20px;
-      color: #00ffff;
     }
-    .intro p {
-      font-size: 18px;
-      line-height: 1.8;
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
     }
-    .features {
+    .hero a {
+      display: inline-block;
+      background: #00d8ff;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 32px;
+      color: #00d8ff;
+      margin-bottom: 20px;
+    }
+    .features, .use-cases, .team {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 30px;
-      padding: 40px 20px;
+      justify-content: center;
     }
-    .feature-card {
+    .card {
       background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 16px;
+      border-radius: 12px;
+      padding: 20px;
       width: 280px;
-      text-align: left;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s;
     }
-    .feature-card:hover {
+    .card:hover {
       transform: translateY(-10px);
     }
-    .feature-card h3 {
-      color: #00ffcc;
-      font-size: 22px;
+    .card i {
+      font-size: 36px;
+      color: #00e6e6;
       margin-bottom: 10px;
     }
-    .feature-card p {
-      font-size: 15px;
-      line-height: 1.6;
-    }
     footer {
-      text-align: center;
+      background: rgba(255,255,255,0.05);
       padding: 30px;
-      background-color: rgba(255,255,255,0.05);
-      font-size: 14px;
+      text-align: center;
       color: #aaa;
+      font-size: 14px;
+    }
+    .contact {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      color: #00d8ff;
+      margin-bottom: 10px;
+    }
+    .contact p {
+      font-size: 18px;
+    }
+    .contact a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="logo"><i class="fas fa-cubes"></i> 区块链未来</div>
+    <div class="logo">⚛ 区块链未来</div>
     <ul>
-      <li><a href="#intro">介绍</a></li>
-      <li><a href="#features">功能</a></li>
-      <li><a href="#footer">联系我们</a></li>
+      <li><a href="#about">关于 / About</a></li>
+      <li><a href="#features">功能 / Features</a></li>
+      <li><a href="#use">应用 / Use Cases</a></li>
+      <li><a href="#team">团队 / Team</a></li>
+      <li><a href="#contact">联系 / Contact</a></li>
     </ul>
   </nav>
 
-  <header>
-    <h1>链接未来的信任网络</h1>
-  </header>
+  <div class="hero">
+    <h1>开启 Web3 新纪元<br>Embrace the Future of Web3</h1>
+    <p>构建一个更安全、透明和去中心化的世界<br>Build a more secure, transparent and decentralized future</p>
+    <a href="#about">了解更多 / Learn More</a>
+  </div>
 
-  <section class="intro" id="intro">
-    <h2>什么是区块链？</h2>
+  <section id="about">
+    <h2>关于区块链 / About Blockchain</h2>
     <p>
-      区块链是一种分布式数据库技术，它具有去中心化、不可篡改、全透明等特点，
-      正在广泛应用于金融、物流、医疗、版权保护等众多领域，正在重构我们的信任体系。
+      区块链是一种分布式账本技术，它允许数据在全球节点之间透明、安全地传输。
+      Blockchain is a distributed ledger technology enabling secure, transparent global data exchange.
     </p>
   </section>
 
-  <section class="features" id="features">
-    <div class="feature-card">
-      <h3><i class="fas fa-network-wired"></i> 去中心化</h3>
-      <p>不依赖任何中介机构，实现点对点的数据存储与交换，打破传统控制结构。</p>
-    </div>
-    <div class="feature-card">
-      <h3><i class="fas fa-lock"></i> 数据不可篡改</h3>
-      <p>每一笔数据记录都会被加密并写入区块，一旦写入后无法被修改或删除。</p>
-    </div>
-    <div class="feature-card">
-      <h3><i class="fas fa-eye"></i> 全程透明</h3>
-      <p>任何人都可以公开查看链上的交易记录，实现真正的流程可追溯与公开。</p>
-    </div>
-    <div class="feature-card">
-      <h3><i class="fas fa-file-code"></i> 智能合约</h3>
-      <p>支持自动执行的代码逻辑，一旦触发条件满足，合约立即执行，无需人工干预。</p>
-    </div>
-    <div class="feature-card">
-      <h3><i class="fas fa-coins"></i> 数字资产</h3>
-      <p>支持加密货币、NFT 等新兴数字资产形态的发行与交易，改变价值交换方式。</p>
+  <section id="features">
+    <h2>核心功能 / Core Features</h2>
+    <div class="features">
+      <div class="card">
+        <i class="fas fa-network-wired"></i>
+        <h3>去中心化 / Decentralization</h3>
+        <p>无需中介，实现点对点信任机制。<br>No intermediaries, true peer-to-peer trust.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-lock"></i>
+        <h3>安全不可篡改 / Security</h3>
+        <p>数据经加密后上链，不可伪造。<br>Encrypted and tamper-proof records.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-file-code"></i>
+        <h3>智能合约 / Smart Contracts</h3>
+        <p>自动执行逻辑流程。<br>Automated contract logic execution.</p>
+      </div>
     </div>
   </section>
 
-  <footer id="footer">
-    版权所有 © 2025 区块链未来 | 技术支持：OpenAI Demo
+  <section id="use">
+    <h2>应用场景 / Use Cases</h2>
+    <div class="use-cases">
+      <div class="card">
+        <i class="fas fa-coins"></i>
+        <h3>加密货币 / Cryptocurrency</h3>
+        <p>数字资产发行与交易<br>Issue and trade digital assets.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-truck"></i>
+        <h3>供应链 / Supply Chain</h3>
+        <p>全流程可追溯管理<br>Traceable and trusted logistics.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-check"></i>
+        <h3>身份认证 / Identity</h3>
+        <p>去中心身份识别系统<br>Decentralized ID verification.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>我们的团队 / Our Team</h2>
+    <div class="team">
+      <div class="card">
+        <i class="fas fa-user-astronaut"></i>
+        <h3>Alex</h3>
+        <p>区块链开发专家<br>Blockchain Developer</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-tie"></i>
+        <h3>Lina</h3>
+        <p>市场与合作<br>Marketing & Partnerships</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>联系我们 / Contact Us</h2>
+    <p>Telegram 客服 | Customer Support: <a href="https://t.me/Jiu126999" target="_blank">@Jiu126999</a></p>
+  </section>
+
+  <footer>
+    版权所有 © 2025 区块链未来 | Blockchain Future - All Rights Reserved
   </footer>
 
 </body>
