@@ -1,44 +1,157 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <!-- ...head content remains unchanged... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>区块链未来 | Blockchain Future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+  <style>
+    body {
+      font-family: 'Noto Serif SC', SimSun, serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+      transition: opacity 0.8s ease;
+    }
+    header {
+      background: url('https://www.videvo.net/videvo_files/converted/2016_08/preview/160721_214_BangkokCityDay_1080p.mp411929.webm') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1 {
+      z-index: 1;
+      font-size: 3em;
+    }
+    nav {
+      background: #ffffffdd;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1em;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(5px);
+    }
+    section {
+      padding: 3em 1.5em;
+      max-width: 960px;
+      margin: auto;
+    }
+    h2 {
+      color: #1976d2;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    .form input, .form textarea {
+      padding: 0.8em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+      font-size: 0.9em;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
 </head>
-<body class="fade-out">
-  <!-- ...existing content... -->
-
-  <section id="elon-opinion">
-    <h2 data-en="Elon Musk on Blockchain">马斯克对区块链的看法</h2>
-    <p data-en="Elon Musk has expressed both optimism and skepticism about blockchain technology. He appreciates the decentralized aspect, particularly for cryptocurrencies like Bitcoin, but warns about environmental and regulatory concerns.">
-      马斯克对区块链技术既有乐观也有保留。他欣赏区块链的去中心化特性，特别是在比特币等加密货币方面，但也提醒其在环保和监管上的潜在问题。
-    </p>
+<body class="fade-in">
+  <header>
+    <h1>区块链未来 Blockchain Future</h1>
+  </header>
+  <nav>
+    <a href="#intro">简介</a>
+    <a href="#projects">项目</a>
+    <a href="#chart">图表</a>
+    <a href="#gpt">GPT建议</a>
+    <a href="#musk">马斯克观点</a>
+    <a href="#news">新闻</a>
+    <a href="#contact">联系</a>
+  </nav>
+  <section id="intro">
+    <h2>区块链简介 / Introduction</h2>
+    <p>区块链是一种分布式账本技术，强调数据不可篡改、透明性和去中心化，是支撑加密货币、智能合约和去中心化应用（DApps）的核心基础。</p>
   </section>
-
+  <section id="projects">
+    <h2>代表性区块链项目</h2>
+    <ul>
+      <li><strong>比特币</strong>：第一个区块链项目，专注点对点支付</li>
+      <li><strong>以太坊</strong>：支持智能合约和 DApps 的平台</li>
+      <li><strong>Polkadot</strong>：提供跨链解决方案</li>
+      <li><strong>Solana</strong>：高吞吐量、低费用的区块链网络</li>
+    </ul>
+  </section>
+  <section id="chart">
+    <h2>用户增长图表 / User Growth Chart</h2>
+    <div id="growthChart" style="width:100%;height:400px;"></div>
+    <script>
+      const chart = echarts.init(document.getElementById('growthChart'));
+      chart.setOption({
+        title: { text: '全球区块链用户增长（估算）' },
+        xAxis: { data: ['2018','2019','2020','2021','2022','2023'] },
+        yAxis: {},
+        series: [{ type: 'line', data: [20, 45, 80, 150, 280, 410] }]
+      });
+    </script>
+  </section>
+  <section id="gpt">
+    <h2>GPT 对区块链的趋势建议</h2>
+    <p>未来的区块链将更重视可扩展性、互操作性和绿色能源效率。它将在金融、供应链、身份验证等更多领域实现大规模应用。GPT建议开发者关注 Layer 2 技术和零知识证明等前沿方向。</p>
+  </section>
+  <section id="musk">
+    <h2>马斯克对区块链的看法</h2>
+    <p>马斯克对区块链技术既有乐观也有保留。他欣赏区块链的去中心化特性，特别是在比特币等加密货币方面，但也提醒其在环保和监管上的潜在问题。</p>
+  </section>
   <section id="news">
-    <h2 data-en="Blockchain News">区块链新闻</h2>
-    <div class="project-grid">
-      <div>
-        <strong data-en="Ethereum Upgrade">以太坊升级</strong>
-        <p data-en="Ethereum completes Shanghai upgrade enabling withdrawals of staked ETH.">
-          以太坊完成上海升级，支持质押ETH的提取。
-        </p>
-      </div>
-      <div>
-        <strong data-en="Hong Kong Licenses Exchanges">香港发放交易所牌照</strong>
-        <p data-en="Hong Kong grants licenses to virtual asset exchanges as part of Web3 strategy.">
-          香港向虚拟资产交易所发放牌照，推动Web3发展战略。
-        </p>
-      </div>
-      <div>
-        <strong data-en="Bitcoin ETFs Approved">比特币ETF获批</strong>
-        <p data-en="US SEC approves first spot Bitcoin ETFs, boosting crypto adoption.">
-          美国SEC批准首个现货比特币ETF，推动加密货币采纳。
-        </p>
-      </div>
-    </div>
+    <h2>区块链新闻</h2>
+    <ul>
+      <li><strong>以太坊升级</strong>：以太坊完成上海升级，支持质押ETH的提取。</li>
+      <li><strong>香港发放交易所牌照</strong>：香港向虚拟资产交易所发放牌照，推动Web3发展战略。</li>
+      <li><strong>比特币ETF获批</strong>：美国SEC批准首个现货比特币ETF，推动加密货币采纳。</li>
+    </ul>
   </section>
-
+  <section id="contact">
+    <h2>联系方式 / Contact</h2>
+    <p>📧 邮箱：contact@example.com</p>
+    <p>📱 Telegram：@jiu126999</p>
+    <p>📷 微信二维码：</p>
+    <img src="https://raw.githubusercontent.com/changcheng123-web/game-download-page/main/%E7%85%A7%E7%89%872025-05-08_14-23-06.jpg" alt="微信二维码" width="150" />
+    <form class="form">
+      <input type="text" placeholder="姓名 / Your Name" required />
+      <input type="email" placeholder="邮箱 / Email" required />
+      <textarea rows="5" placeholder="留言 / Message"></textarea>
+      <button type="submit">提交 / Submit</button>
+    </form>
+  </section>
   <footer>
-    版权所有 © 2025 区块链未来 Blockchain Future – All Rights Reserved
+    <p>© 2025 区块链未来 Blockchain Future. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
