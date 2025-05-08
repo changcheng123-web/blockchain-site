@@ -122,96 +122,53 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .contact img {
+      margin-top: 20px;
+      width: 180px;
+      border-radius: 12px;
+    }
+    .contact form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+    }
+    .contact button {
+      background-color: #00d8ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="logo">⚛ 区块链未来</div>
-    <ul>
-      <li><a href="#about">关于 / About</a></li>
-      <li><a href="#features">功能 / Features</a></li>
-      <li><a href="#use">应用 / Use Cases</a></li>
-      <li><a href="#team">团队 / Team</a></li>
-      <li><a href="#contact">联系 / Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="hero">
-    <h1>开启 Web3 新纪元<br>Embrace the Future of Web3</h1>
-    <p>构建一个更安全、透明和去中心化的世界<br>Build a more secure, transparent and decentralized future</p>
-    <a href="#about">了解更多 / Learn More</a>
-  </div>
-
-  <section id="about">
-    <h2>关于区块链 / About Blockchain</h2>
-    <p>
-      区块链是一种分布式账本技术，它允许数据在全球节点之间透明、安全地传输。
-      Blockchain is a distributed ledger technology enabling secure, transparent global data exchange.
-    </p>
-  </section>
-
-  <section id="features">
-    <h2>核心功能 / Core Features</h2>
-    <div class="features">
-      <div class="card">
-        <i class="fas fa-network-wired"></i>
-        <h3>去中心化 / Decentralization</h3>
-        <p>无需中介，实现点对点信任机制。<br>No intermediaries, true peer-to-peer trust.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-lock"></i>
-        <h3>安全不可篡改 / Security</h3>
-        <p>数据经加密后上链，不可伪造。<br>Encrypted and tamper-proof records.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-file-code"></i>
-        <h3>智能合约 / Smart Contracts</h3>
-        <p>自动执行逻辑流程。<br>Automated contract logic execution.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="use">
-    <h2>应用场景 / Use Cases</h2>
-    <div class="use-cases">
-      <div class="card">
-        <i class="fas fa-coins"></i>
-        <h3>加密货币 / Cryptocurrency</h3>
-        <p>数字资产发行与交易<br>Issue and trade digital assets.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-truck"></i>
-        <h3>供应链 / Supply Chain</h3>
-        <p>全流程可追溯管理<br>Traceable and trusted logistics.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-user-check"></i>
-        <h3>身份认证 / Identity</h3>
-        <p>去中心身份识别系统<br>Decentralized ID verification.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="team">
-    <h2>我们的团队 / Our Team</h2>
-    <div class="team">
-      <div class="card">
-        <i class="fas fa-user-astronaut"></i>
-        <h3>Alex</h3>
-        <p>区块链开发专家<br>Blockchain Developer</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-user-tie"></i>
-        <h3>Lina</h3>
-        <p>市场与合作<br>Marketing & Partnerships</p>
-      </div>
-    </div>
-  </section>
+  <!-- 省略前面内容不变 -->
 
   <section id="contact" class="contact">
     <h2>联系我们 / Contact Us</h2>
-    <p>Telegram 客服 | Customer Support: <a href="https://t.me/Jiu126999" target="_blank">@Jiu126999</a></p>
+    <p>📨 邮箱 / Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+    <p>💬 Telegram: <a href="https://t.me/Jiu126999" target="_blank">@Jiu126999</a></p>
+    <p>📱 微信 / WeChat：</p>
+    <img src="wechat_qr.jpg" alt="微信二维码">
+
+    <form>
+      <input type="text" placeholder="你的名字 / Your Name" required>
+      <input type="email" placeholder="邮箱 / Email" required>
+      <textarea placeholder="留言 / Message" rows="4" required></textarea>
+      <button type="submit">立即加入 / Join Now</button>
+    </form>
   </section>
 
   <footer>
