@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>区块链未来 | Blockchain Future</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     * {
       margin: 0;
@@ -14,12 +15,11 @@
     }
     body {
       font-family: 'Orbitron', sans-serif;
-      color: #ffffff;
-      background: radial-gradient(circle at top right, #112233, #000000);
-      background-attachment: fixed;
+      color: #333;
+      background: #f8f9fa;
     }
     nav {
-      background: rgba(10, 20, 30, 0.9);
+      background: #ffffff;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -27,17 +27,17 @@
       position: fixed;
       width: 100%;
       z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     nav a {
-      color: #00ffff;
+      color: #0077cc;
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #00ccff;
+      color: #005fa3;
     }
     .hero {
       height: 100vh;
@@ -47,17 +47,16 @@
       align-items: center;
       text-align: center;
       padding: 0 2rem;
-      background: url('https://images.unsplash.com/photo-1610964077625-0d9d50d8f933?fit=crop&w=1400&q=80') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1629114513514-2242b8c5dc5e?fit=crop&w=1500&q=80') no-repeat center center/cover;
+      color: #fff;
     }
     .hero h1 {
       font-size: 3rem;
-      color: #00ffff;
       margin-bottom: 1rem;
       text-shadow: 0 0 10px #000;
     }
     .hero p {
       font-size: 1.2rem;
-      color: #eee;
       text-shadow: 0 0 5px #000;
     }
     section {
@@ -66,35 +65,39 @@
       margin: auto;
     }
     h2 {
-      color: #00ffff;
+      color: #0077cc;
       font-size: 2rem;
       margin-bottom: 2rem;
-      border-left: 4px solid #00ffff;
+      border-left: 4px solid #0077cc;
       padding-left: 1rem;
     }
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      color: #eee;
+      color: #333;
     }
     .project-grid div {
-      background: rgba(255, 255, 255, 0.05);
+      background: #ffffff;
       padding: 1rem;
       border-radius: 8px;
-      border-left: 3px solid #00ffff;
-      transition: all 0.3s;
+      border-left: 3px solid #0077cc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
     }
     .project-grid div:hover {
-      background: rgba(0,255,255,0.1);
       transform: translateY(-4px);
+    }
+    canvas {
+      max-width: 100%;
+      margin-top: 2rem;
     }
     footer {
       text-align: center;
       padding: 2rem;
-      background: #000d1a;
+      background: #f1f1f1;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #777;
     }
   </style>
 </head>
@@ -106,6 +109,7 @@
       <a href="#projects">项目</a>
       <a href="#dapps">DApp</a>
       <a href="#insights">观点</a>
+      <a href="#chart">图表</a>
       <a href="#contact">联系</a>
     </div>
   </nav>
@@ -124,36 +128,18 @@
   <section id="projects">
     <h2>代表性区块链项目 / Notable Blockchain Projects</h2>
     <div class="project-grid">
-      <div>
-        <strong>比特币 / Bitcoin</strong>
-        <p>第一个区块链项目，专注点对点支付。</p>
-      </div>
-      <div>
-        <strong>以太坊 / Ethereum</strong>
-        <p>智能合约和 DApp 的基础平台，Web3 的核心。</p>
-      </div>
-      <div>
-        <strong>Polkadot</strong>
-        <p>实现不同区块链之间的互操作性。</p>
-      </div>
-      <div>
-        <strong>Solana</strong>
-        <p>高性能、高吞吐、低手续费的公链。</p>
-      </div>
+      <div><strong>比特币 / Bitcoin</strong><p>第一个区块链项目，专注点对点支付。</p></div>
+      <div><strong>以太坊 / Ethereum</strong><p>智能合约和 DApp 的基础平台，Web3 的核心。</p></div>
+      <div><strong>Polkadot</strong><p>实现不同区块链之间的互操作性。</p></div>
+      <div><strong>Solana</strong><p>高性能、高吞吐、低手续费的公链。</p></div>
     </div>
   </section>
 
   <section id="dapps">
     <h2>DApp 示例 / DApp Showcase</h2>
     <div class="project-grid">
-      <div>
-        <strong>MetaMask</strong>
-        <p>以太坊钱包插件，用户管理资产并连接 DApp。</p>
-      </div>
-      <div>
-        <strong>Uniswap</strong>
-        <p>去中心化交易平台，无需中介完成资产交换。</p>
-      </div>
+      <div><strong>MetaMask</strong><p>以太坊钱包插件，用户管理资产并连接 DApp。</p></div>
+      <div><strong>Uniswap</strong><p>去中心化交易平台，无需中介完成资产交换。</p></div>
     </div>
   </section>
 
@@ -161,6 +147,33 @@
     <h2>GPT 见解 / GPT Insights</h2>
     <p>未来十年，区块链将从加密货币扩展到数字身份、数字资产认证、无信任计算、AI 协议执行等。国家与企业将加速部署区块链基础设施，数据透明、合规、安全将成为核心。</p>
     <p>In the next decade, blockchain will expand from cryptocurrencies to digital identity, asset provenance, trustless computing, and AI-integrated protocols. Governments and enterprises will accelerate infrastructure adoption.</p>
+  </section>
+
+  <section id="chart">
+    <h2>区块链采用趋势图 / Blockchain Adoption Trends</h2>
+    <canvas id="trendChart" width="600" height="300"></canvas>
+    <script>
+      const ctx = document.getElementById('trendChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['2015', '2017', '2019', '2021', '2023'],
+          datasets: [{
+            label: '全球区块链采纳指数 / Adoption Index',
+            data: [10, 30, 60, 80, 120],
+            backgroundColor: 'rgba(0, 119, 204, 0.2)',
+            borderColor: '#0077cc',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+    </script>
   </section>
 
   <section id="contact">
