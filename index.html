@@ -7,15 +7,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #091921, #1b2b40);
       color: #f0f0f0;
+      position: relative;
+    }
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 99;
+    }
+    nav a {
+      color: #00d1ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 100px 20px 60px;
     }
     header h1 {
       font-size: 48px;
@@ -28,7 +61,7 @@
     }
     section {
       max-width: 1100px;
-      margin: 50px auto;
+      margin: 80px auto;
       padding: 0 20px;
     }
     h2 {
@@ -38,7 +71,7 @@
       border-left: 5px solid #00d1ff;
       padding-left: 15px;
     }
-    .features, .use-cases {
+    .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
@@ -107,12 +140,26 @@
   </style>
 </head>
 <body>
+  <video autoplay muted loop class="bg-video">
+    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/160810_A_104_01.mp492654.webm" type="video/webm">
+  </video>
+
+  <nav>
+    <div><a href="#">区块链未来</a></div>
+    <div>
+      <a href="#projects">项目</a>
+      <a href="#dapps">DApp</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">联系</a>
+    </div>
+  </nav>
+
   <header>
     <h1>区块链未来</h1>
     <p>开启分布式数字时代 | Empowering the Decentralized Future</p>
   </header>
 
-  <section>
+  <section id="projects">
     <h2>代表性区块链项目 / Notable Blockchain Projects</h2>
     <div class="features">
       <div class="card">
@@ -140,7 +187,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="dapps">
     <h2>DApp 示例 / DApp Showcase</h2>
     <div class="features">
       <div class="card">
@@ -161,7 +208,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="faq">
     <h2>常见问题 / FAQ</h2>
     <div class="features">
       <div class="card">
@@ -179,7 +226,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>联系我们 / Contact Us</h2>
     <p><i class="fas fa-envelope"></i> 邮箱 / Email: contact@example.com</p>
     <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/Jiu126999" target="_blank">@Jiu126999</a></p>
