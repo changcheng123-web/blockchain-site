@@ -1,179 +1,83 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <title>区块链未来 Blockchain Future</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Titillium Web', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: rgba(0, 0, 50, 0.7);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav .logo {
-      font-size: 24px;
-      font-weight: 600;
-      color: #00d8ff;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #00d8ff;
-    }
-    .hero {
-      padding: 100px 20px;
-      text-align: center;
-      background: url('https://images.unsplash.com/photo-1626331803715-c40cf9e52e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
-      color: #fff;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-    .hero a {
-      display: inline-block;
-      background: #00d8ff;
-      color: #000;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 32px;
-      color: #00d8ff;
-      margin-bottom: 20px;
-    }
-    .features, .use-cases, .team {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 20px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-    }
-    .card i {
-      font-size: 36px;
-      color: #00e6e6;
-      margin-bottom: 10px;
-    }
-    footer {
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      text-align: center;
-      color: #aaa;
-      font-size: 14px;
-    }
-    .contact {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .contact h2 {
-      color: #00d8ff;
-      margin-bottom: 10px;
-    }
-    .contact p {
-      font-size: 18px;
-    }
-    .contact a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact img {
-      margin-top: 20px;
-      width: 180px;
-      border-radius: 12px;
-    }
-    .contact form {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-    .contact input, .contact textarea {
-      width: 100%;
-      max-width: 400px;
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-    }
-    .contact button {
-      background-color: #00d8ff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
+<section id="projects">
+  <h2>代表性区块链项目 / Notable Blockchain Projects</h2>
+  <div class="features">
+    <div class="card">
+      <i class="fab fa-bitcoin"></i>
+      <h3>比特币 / Bitcoin</h3>
+      <p>世界首个区块链项目，专注于点对点的数字支付系统。<br>The first blockchain, focused on peer-to-peer payments.</p>
+    </div>
+    <div class="card">
+      <i class="fab fa-ethereum"></i>
+      <h3>以太坊 / Ethereum</h3>
+      <p>支持智能合约和去中心化应用，是 Web3 的基础平台。<br>Enables smart contracts and DApps—foundation of Web3.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-leaf"></i>
+      <h3>Polkadot</h3>
+      <p>连接多个区块链，实现跨链互操作。<br>Enables interoperability between different blockchains.</p>
+    </div>
+    <div class="card">
+      <i class="fab fa-solidity"></i>
+      <h3>Solana</h3>
+      <p>以极高性能和低成本著称的区块链网络。<br>Known for high throughput and low transaction fees.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- 省略前面内容不变 -->
+<section id="dapps">
+  <h2>DApp 示例 / DApp Showcase</h2>
+  <p>
+    DApp（去中心化应用）无需依赖中心服务器，部署在区块链上，具备不可篡改、自动执行的特点。
+    <br><br>
+    DApps (Decentralized Applications) run on blockchain, eliminating the need for central servers and ensuring tamper-proof logic.
+  </p>
+  <div class="features">
+    <div class="card">
+      <i class="fas fa-wallet"></i>
+      <h3>MetaMask</h3>
+      <p>浏览器钱包插件，用户可以管理加密资产并与 DApp 交互。<br>Browser-based wallet for managing crypto assets and interacting with DApps.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-globe"></i>
+      <h3>Uniswap</h3>
+      <p>基于以太坊的去中心化交易平台，支持自动化做市。<br>Ethereum-based DEX enabling automated token swaps.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-palette"></i>
+      <h3>OpenSea</h3>
+      <p>世界领先的 NFT 市场，支持数字艺术品的交易。<br>The largest NFT marketplace for digital art and assets.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="contact" class="contact">
-    <h2>联系我们 / Contact Us</h2>
-    <p>📨 邮箱 / Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
-    <p>💬 Telegram: <a href="https://t.me/Jiu126999" target="_blank">@Jiu126999</a></p>
-    <p>📱 微信 / WeChat：</p>
-    <img src="wechat_qr.jpg" alt="微信二维码">
+<section id="faq">
+  <h2>常见问题 / FAQ</h2>
+  <div class="features">
+    <div class="card">
+      <h3>区块链安全吗？<br>Is blockchain secure?</h3>
+      <p>是的，区块链通过加密算法和分布式存储大幅提高了安全性。<br>Yes, it uses encryption and decentralization to ensure security.</p>
+    </div>
+    <div class="card">
+      <h3>我需要投资区块链吗？<br>Should I invest in blockchain?</h3>
+      <p>投资需谨慎，建议先了解技术原理与市场趋势。<br>Only invest after understanding the tech and market risks.</p>
+    </div>
+    <div class="card">
+      <h3>区块链能取代传统金融吗？<br>Can blockchain replace traditional finance?</h3>
+      <p>它正在重塑金融，但未来更可能是融合共存。<br>It complements traditional finance and may coexist with it.</p>
+    </div>
+  </div>
+</section>
 
-    <form>
-      <input type="text" placeholder="你的名字 / Your Name" required>
-      <input type="email" placeholder="邮箱 / Email" required>
-      <textarea placeholder="留言 / Message" rows="4" required></textarea>
-      <button type="submit">立即加入 / Join Now</button>
-    </form>
-  </section>
-
-  <footer>
-    版权所有 © 2025 区块链未来 | Blockchain Future - All Rights Reserved
-  </footer>
-
-</body>
-</html>
+<section id="contact" class="contact">
+  <h2>联系我们 / Contact Us</h2>
+  <p>📨 邮箱 / Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+  <p>💬 Telegram: <a href="https://t.me/Jiu126999" target="_blank">@Jiu126999</a></p>
+  <p>📱 微信 / WeChat：</p>
+  <img src="wechat_qr.jpg" alt="微信二维码">
+  <form>
+    <input type="text" placeholder="你的名字 / Your Name" required>
+    <input type="email" placeholder="邮箱 / Email" required>
+    <textarea placeholder="留言 / Message" rows="4" required></textarea>
+    <button type="submit">立即加入 / Join Now</button>
+  </form>
+</section>
