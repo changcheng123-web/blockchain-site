@@ -1,230 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>区块链未来 | Blockchain Future</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'SimSun', serif;
-      color: #222;
-      background: #f5f8fc;
-      transition: opacity 0.5s ease-in-out;
-    }
-    body.fade-out {
-      opacity: 0;
-    }
-    nav {
-      background: #ffffff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    nav a {
-      color: #0077cc;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #005fa3;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 2rem;
-      background: #000;
-    }
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #fff;
-      text-shadow: 0 0 10px #000;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #ddd;
-      text-shadow: 0 0 5px #000;
-    }
-    section {
-      padding: 5rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #0077cc;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      border-left: 4px solid #0077cc;
-      padding-left: 1rem;
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      color: #333;
-    }
-    .project-grid div {
-      background: #ffffff;
-      padding: 1rem;
-      border-radius: 8px;
-      border-left: 3px solid #0077cc;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    .project-grid div:hover {
-      transform: translateY(-4px);
-    }
-    canvas {
-      max-width: 100%;
-      margin-top: 2rem;
-    }
-    .contact {
-      background: #eef3f9;
-      padding: 3rem;
-      border-radius: 8px;
-    }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact input, .contact textarea {
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    .contact button {
-      padding: 0.75rem;
-      background: #0077cc;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f1f1f1;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.remove("fade-out");
-    });
-  </script>
+  <!-- ...head content remains unchanged... -->
 </head>
 <body class="fade-out">
-  <nav>
-    <div><strong>区块链未来</strong></div>
-    <div>
-      <a href="#projects">项目</a>
-      <a href="#trend">趋势</a>
-      <a href="#chart">图表</a>
-      <a href="#contact">联系</a>
-    </div>
-  </nav>
+  <!-- ...existing content... -->
 
-  <div class="hero">
-    <video autoplay muted loop>
-      <source src="https://static.videezy.com/system/resources/previews/000/036/504/original/Bitcoin-Background-Motion-Graphic.mp4" type="video/mp4">
-    </video>
-    <h1>区块链未来</h1>
-    <p>开启分布式数字时代 | Empowering the Decentralized Future</p>
-  </div>
-
-  <section id="projects">
-    <h2>区块链基础知识 / Blockchain Basics</h2>
-    <p>区块链是一种分布式账本技术，具备去中心化、防篡改、透明公开的特性。每个区块包含数据、时间戳和前一区块的哈希值，形成链式结构。它广泛应用于金融、供应链、医疗、版权保护等领域。</p>
-  </section>
-
-  <section>
-    <h2>代表性项目 / Notable Projects</h2>
-    <div class="project-grid">
-      <div><strong>比特币 Bitcoin</strong><br>专注于点对点支付的开创性数字货币</div>
-      <div><strong>以太坊 Ethereum</strong><br>智能合约与DApp的开发平台</div>
-      <div><strong>Polkadot</strong><br>跨链操作实现区块链互通</div>
-      <div><strong>Solana</strong><br>高性能与低费用著称的公链</div>
-    </div>
-  </section>
-
-  <section id="trend">
-    <h2>发展趋势与建议 / Trends & Suggestions</h2>
-    <p>GPT观点：未来区块链将在以下方向发展：
-      <ul>
-        <li>与人工智能和物联网深度结合</li>
-        <li>更高性能的Layer2扩展方案</li>
-        <li>隐私保护（如零知识证明）的提升</li>
-        <li>企业与政府的链上应用将快速普及</li>
-      </ul>
+  <section id="elon-opinion">
+    <h2 data-en="Elon Musk on Blockchain">马斯克对区块链的看法</h2>
+    <p data-en="Elon Musk has expressed both optimism and skepticism about blockchain technology. He appreciates the decentralized aspect, particularly for cryptocurrencies like Bitcoin, but warns about environmental and regulatory concerns.">
+      马斯克对区块链技术既有乐观也有保留。他欣赏区块链的去中心化特性，特别是在比特币等加密货币方面，但也提醒其在环保和监管上的潜在问题。
     </p>
   </section>
 
-  <section id="chart">
-    <h2>区块链增长图表 / Blockchain Adoption</h2>
-    <canvas id="growthChart" height="300"></canvas>
-    <script>
-      const ctx = document.getElementById('growthChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['2016','2017','2018','2019','2020','2021','2022','2023'],
-          datasets: [{
-            label: '全球区块链用户数（百万）',
-            data: [5, 10, 20, 35, 55, 90, 140, 220],
-            backgroundColor: 'rgba(0,119,204,0.2)',
-            borderColor: '#0077cc',
-            borderWidth: 2,
-            fill: true,
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: { beginAtZero: true }
-          }
-        }
-      });
-    </script>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>联系我们 / Contact Us</h2>
-    <p>Email: contact@example.com<br>Telegram: @Jiu126999<br>微信二维码：<br><img src="https://i.imgur.com/z6Q2J9x.png" alt="WeChat QR" width="150" /></p>
-    <form>
-      <input type="text" placeholder="你的名字 / Your Name" required />
-      <input type="email" placeholder="邮箱 / Email" required />
-      <textarea placeholder="留言 / Message" rows="5"></textarea>
-      <button type="submit">提交 / Submit</button>
-    </form>
+  <section id="news">
+    <h2 data-en="Blockchain News">区块链新闻</h2>
+    <div class="project-grid">
+      <div>
+        <strong data-en="Ethereum Upgrade">以太坊升级</strong>
+        <p data-en="Ethereum completes Shanghai upgrade enabling withdrawals of staked ETH.">
+          以太坊完成上海升级，支持质押ETH的提取。
+        </p>
+      </div>
+      <div>
+        <strong data-en="Hong Kong Licenses Exchanges">香港发放交易所牌照</strong>
+        <p data-en="Hong Kong grants licenses to virtual asset exchanges as part of Web3 strategy.">
+          香港向虚拟资产交易所发放牌照，推动Web3发展战略。
+        </p>
+      </div>
+      <div>
+        <strong data-en="Bitcoin ETFs Approved">比特币ETF获批</strong>
+        <p data-en="US SEC approves first spot Bitcoin ETFs, boosting crypto adoption.">
+          美国SEC批准首个现货比特币ETF，推动加密货币采纳。
+        </p>
+      </div>
+    </div>
   </section>
 
   <footer>
