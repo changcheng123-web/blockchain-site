@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>区块链未来 | Blockchain Future</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     * {
@@ -14,9 +13,13 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'SimSun', serif;
       color: #333;
-      background: #f8f9fa;
+      background: #fdfdfd;
+      transition: opacity 0.5s ease-in-out;
+    }
+    body.fade-out {
+      opacity: 0;
     }
     nav {
       background: #ffffff;
@@ -47,16 +50,28 @@
       align-items: center;
       text-align: center;
       padding: 0 2rem;
-      background: url('https://images.unsplash.com/photo-1629114513514-2242b8c5dc5e?fit=crop&w=1500&q=80') no-repeat center center/cover;
-      color: #fff;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
+      color: #fff;
       text-shadow: 0 0 10px #000;
     }
     .hero p {
       font-size: 1.2rem;
+      color: #eee;
       text-shadow: 0 0 5px #000;
     }
     section {
@@ -88,6 +103,29 @@
     .project-grid div:hover {
       transform: translateY(-4px);
     }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea, form button {
+      font-family: 'SimSun', serif;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #005fa3;
+    }
     canvas {
       max-width: 100%;
       margin-top: 2rem;
@@ -100,91 +138,37 @@
       color: #777;
     }
   </style>
-</head>
-<body>
-  <nav>
-    <div>区块链未来</div>
-    <div>
-      <a href="#intro">简介</a>
-      <a href="#projects">项目</a>
-      <a href="#dapps">DApp</a>
-      <a href="#insights">观点</a>
-      <a href="#chart">图表</a>
-      <a href="#contact">联系</a>
-    </div>
-  </nav>
-
-  <section class="hero" id="intro">
-    <h1>区块链未来</h1>
-    <p>开启去中心化时代 · Empowering the Decentralized Future</p>
-  </section>
-
-  <section>
-    <h2>什么是区块链？ / What is Blockchain?</h2>
-    <p>区块链是一种去中心化的分布式账本技术，通过密码学和共识机制确保数据不可篡改、全网可验证。它正重塑金融、供应链、身份验证、游戏和更多行业。</p>
-    <p>Blockchain is a decentralized, distributed ledger technology that enables secure, transparent and tamper-proof record-keeping across a network. It’s revolutionizing finance, supply chain, identity, gaming and more.</p>
-  </section>
-
-  <section id="projects">
-    <h2>代表性区块链项目 / Notable Blockchain Projects</h2>
-    <div class="project-grid">
-      <div><strong>比特币 / Bitcoin</strong><p>第一个区块链项目，专注点对点支付。</p></div>
-      <div><strong>以太坊 / Ethereum</strong><p>智能合约和 DApp 的基础平台，Web3 的核心。</p></div>
-      <div><strong>Polkadot</strong><p>实现不同区块链之间的互操作性。</p></div>
-      <div><strong>Solana</strong><p>高性能、高吞吐、低手续费的公链。</p></div>
-    </div>
-  </section>
-
-  <section id="dapps">
-    <h2>DApp 示例 / DApp Showcase</h2>
-    <div class="project-grid">
-      <div><strong>MetaMask</strong><p>以太坊钱包插件，用户管理资产并连接 DApp。</p></div>
-      <div><strong>Uniswap</strong><p>去中心化交易平台，无需中介完成资产交换。</p></div>
-    </div>
-  </section>
-
-  <section id="insights">
-    <h2>GPT 见解 / GPT Insights</h2>
-    <p>未来十年，区块链将从加密货币扩展到数字身份、数字资产认证、无信任计算、AI 协议执行等。国家与企业将加速部署区块链基础设施，数据透明、合规、安全将成为核心。</p>
-    <p>In the next decade, blockchain will expand from cryptocurrencies to digital identity, asset provenance, trustless computing, and AI-integrated protocols. Governments and enterprises will accelerate infrastructure adoption.</p>
-  </section>
-
-  <section id="chart">
-    <h2>区块链采用趋势图 / Blockchain Adoption Trends</h2>
-    <canvas id="trendChart" width="600" height="300"></canvas>
-    <script>
-      const ctx = document.getElementById('trendChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['2015', '2017', '2019', '2021', '2023'],
-          datasets: [{
-            label: '全球区块链采纳指数 / Adoption Index',
-            data: [10, 30, 60, 80, 120],
-            backgroundColor: 'rgba(0, 119, 204, 0.2)',
-            borderColor: '#0077cc',
-            borderWidth: 2
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: { beginAtZero: true }
-          }
-        }
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          document.body.classList.add("fade-out");
+        });
       });
-    </script>
-  </section>
-
-  <section id="contact">
+    });
+  </script>
+</head>
+<body class="fade-out">
+  <div class="hero">
+    <video autoplay muted loop>
+      <source src="https://cdn.coverr.co/videos/coverr-futuristic-blockchain-network-3025/1080p.mp4" type="video/mp4">
+    </video>
+    <h1>区块链未来</h1>
+    <p>开启分布式数字时代 | Empowering the Decentralized Future</p>
+  </div>
+  <section>
     <h2>联系我们 / Contact Us</h2>
-    <p>📩 Email: contact@example.com</p>
-    <p>📬 Telegram: @jiu126999</p>
-    <p>📷 微信二维码:<br><img src="./wechat_qr.jpg" alt="WeChat QR" width="150" /></p>
+    <form>
+      <input type="text" placeholder="你的名字 / Your Name" required />
+      <input type="email" placeholder="邮箱 / Email" required />
+      <textarea rows="4" placeholder="留言 / Message"></textarea>
+      <button type="submit">立即加入 / Join Now</button>
+    </form>
   </section>
-
   <footer>
-    版权所有 © 2025 区块链未来 | Blockchain Future – All Rights Reserved
+    版权所有 © 2025 区块链未来 Blockchain Future – All Rights Reserved
   </footer>
 </body>
 </html>
